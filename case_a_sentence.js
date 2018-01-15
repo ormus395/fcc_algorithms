@@ -11,7 +11,6 @@ function titleCase(str) {
   
   for(var i = 0; i < newString.length; i++) {
     stringArr.push(newString[i].capitalize());
-  
   }
   return stringArr.join(' ');
 }
