@@ -8,15 +8,14 @@ However, if the given maximum string length num is less than or equal to 3, then
 
 function truncateString(str, num) {
   // Clear out that junk in your trunk
+  let truncate;
   if(str.length === num || str.length < num) {
     return str;
   }
   else if(num <= 3) {
-    let truncate = str.slice(0, num);
-    return truncate + '...';
+    return truncate = str.slice(0, num) + '...';
   } else {
-    let truncate = str.slice(0, num - 3);
-    return truncate + '...';
+    return truncate = str.slice(0, num - 3) + '...';
   }
 }
 

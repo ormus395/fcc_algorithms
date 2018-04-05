@@ -11,20 +11,15 @@ We'll pass strings with varying formats, such as "racecar", "RaceCar", and "race
 We'll also pass strings with special symbols, such as "2A3*3a2", "2A3 3a2", and "2_A3*3#A2".
 */
 
-function palindrome(str) {
+function isPalindrome(str) {
   // Good luck!
   var newStr = removeCharacters(str).toLowerCase();
-  var palindrome = removeCharacters(str).toLowerCase().split('').reverse().join('');
-  if(newStr === palindrome)
-    return true;
-  else
-    return false;
+  return newStr === removeCharacters(str).toLowerCase().split('').reverse().join('');
   
 }
 
 function removeCharacters(str) {
-  var newString = str.replace(/[^A-Za-z0-9]/g,"");
-  return newString;
+  return str.replace(/[^A-Za-z0-9]/g,"");
 }
 
 palindrome("eye");
